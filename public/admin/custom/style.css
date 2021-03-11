@@ -1,0 +1,30 @@
+.nav-sidebar > .nav-item > .nav-link.active {
+    box-shadow: unset !important;
+}
+
+.form-control:focus {
+    color: #212529;
+    background-color: #fff;
+    border-color: #86b7fe;
+    outline: 0;
+    box-shadow: inset 0 1px 1px rgb(0 0 0 / 8%), 0 0 8px rgb(102 175 233 / 60%);
+}
+.card-title {
+    margin-bottom: 0;
+}
+
+.btn:focus {
+    outline: 0;
+    box-shadow: unset !important;
+}
+
+/* font - size */
+.font-11 {
+    font-size: 11px !important;
+}
+
+.form-control[readonly]:focus{
+    background-color : #e9ecef;
+     box-shadow: unset !important;
+}
+
