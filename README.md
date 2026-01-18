@@ -7,6 +7,7 @@ A powerful, flexible, and modular Content Management System built on Laravel 8, 
 ## 🚀 Features
 
 ### Core CMS Capabilities
+
 - **Post Management** - Create, edit, and manage posts with rich content editing
 - **Category System** - Hierarchical categorization for content organization
 - **Media Management** - Built-in media manager with upload, library, and organization features
@@ -16,6 +17,7 @@ A powerful, flexible, and modular Content Management System built on Laravel 8, 
 - **Content Templates** - Multiple template support for different content types
 
 ### Backend Features
+
 - **Role-Based Access Control (RBAC)** - Granular permission management with custom roles
 - **User Management** - Complete user administration with profile customization
   - User profiles with avatar support
@@ -26,17 +28,20 @@ A powerful, flexible, and modular Content Management System built on Laravel 8, 
 - **Backend Dashboard** - Comprehensive admin interface for content and system management
 
 ### Frontend Capabilities
+
 - **Responsive Theme System** - Multiple theme support (default theme included)
 - **Frontend Controllers** - Dedicated controllers for public-facing content
 - **Asset Management** - CSS, JavaScript, and image assets organization
 - **Dynamic Template Loading** - Template engine for dynamic content rendering
 
 ### Modular Architecture
+
 - **Accounting Module** - Financial and accounting functionality
 - **Inventory Module** - Stock and inventory management
 - **Extensible Module System** - Easy to add new modules for custom business logic
 
 ### Advanced Features
+
 - **Database Migrations** - Version-controlled database schema management
 - **Database Seeders** - Easy data population for development and testing
 - **Authentication & Authorization** - Built-in Laravel authentication with custom role system
@@ -68,24 +73,28 @@ A powerful, flexible, and modular Content Management System built on Laravel 8, 
 ## ⚙️ Installation
 
 ### 1. Clone or Download the Project
+
 ```bash
 git clone <repository-url> laracms
 cd laracms/application
 ```
 
 ### 2. Install Dependencies
+
 ```bash
 composer install
 npm install
 ```
 
 ### 3. Environment Configuration
+
 ```bash
 cp .env.example .env
 php artisan key:generate
 ```
 
 Update your `.env` file with:
+
 ```env
 APP_NAME="Laracms"
 APP_DEBUG=true
@@ -100,18 +109,21 @@ DB_PASSWORD=
 ```
 
 ### 4. Database Setup
+
 ```bash
 php artisan migrate
 php artisan db:seed
 ```
 
 ### 5. Build Assets (if using Mix)
+
 ```bash
 npm run dev      # Development
 npm run production # Production
 ```
 
 ### 6. Start Development Server
+
 ```bash
 php artisan serve
 ```
@@ -198,51 +210,56 @@ laracms/
 
 ## 🔌 Main Models
 
-| Model | Purpose |
-|-------|---------|
-| **Post** | Core content model with categories, metadata, and custom fields |
-| **Category** | Content categorization and organization |
-| **Media** | Media file management and metadata |
-| **User** | User authentication and profile management |
-| **Role** | Role definition and permission mapping |
-| **Roleuser** | User-role association |
-| **PostCustomField** | Custom field definitions for posts |
-| **PostField** | Field values for custom post fields |
-| **PostMeta** | Additional metadata for posts |
-| **Term** | Taxonomy term management |
-| **TermTaxonomy** | Taxonomy classification |
-| **Routegroup** | Route grouping for menu organization |
-| **Routelist** | Individual route definitions |
-| **Routelistrole** | Route permission mapping |
+| Model               | Purpose                                                         |
+| ------------------- | --------------------------------------------------------------- |
+| **Post**            | Core content model with categories, metadata, and custom fields |
+| **Category**        | Content categorization and organization                         |
+| **Media**           | Media file management and metadata                              |
+| **User**            | User authentication and profile management                      |
+| **Role**            | Role definition and permission mapping                          |
+| **Roleuser**        | User-role association                                           |
+| **PostCustomField** | Custom field definitions for posts                              |
+| **PostField**       | Field values for custom post fields                             |
+| **PostMeta**        | Additional metadata for posts                                   |
+| **Term**            | Taxonomy term management                                        |
+| **TermTaxonomy**    | Taxonomy classification                                         |
+| **Routegroup**      | Route grouping for menu organization                            |
+| **Routelist**       | Individual route definitions                                    |
+| **Routelistrole**   | Route permission mapping                                        |
 
 ---
 
 ## 🎯 Key Functionalities
 
 ### Media Management
+
 - Upload media directly from the backend
 - Maintain a media library
 - Select media for posts with single or multiple selection
 - Organize media with metadata
 
 ### Custom Post Fields
+
 - Define custom field types dynamically
 - Attach fields to specific post types or globally
 - Support for various field types (text, textarea, select, etc.)
 - Store and retrieve custom field values
 
 ### User Roles & Permissions
+
 - Create custom roles with granular permissions
 - Assign multiple roles to users
 - Control backend access based on roles
 - Route-level permission management
 
 ### Dynamic Content Templates
+
 - Support multiple templates per content type
 - Load custom fields based on template selection
 - Organize templates by theme
 
 ### Modular Expansion
+
 - Dedicated module directories (Accounting, Inventory)
 - Isolated module namespacing via PSR-4 autoloading
 - Easy to create new business-specific modules
@@ -267,6 +284,7 @@ Key configuration files to customize:
 Base API endpoint: `/api/`
 
 Current API routes support authentication:
+
 - `/api/user` - Get authenticated user details (requires auth:api middleware)
 
 Extend API routes in `routes/api.php` for custom endpoints.
@@ -317,6 +335,7 @@ Full dependencies available in `composer.json`
 ## 📝 Common Tasks
 
 ### Create a New Post
+
 1. Navigate to Backend → Posts
 2. Fill in post details (title, description, category)
 3. Add custom fields as needed
@@ -325,6 +344,7 @@ Full dependencies available in `composer.json`
 6. Publish
 
 ### Add a Custom Field
+
 1. Navigate to Backend → Post Fields
 2. Define field name, type, and default value
 3. Select post types to attach
@@ -332,12 +352,14 @@ Full dependencies available in `composer.json`
 5. Save
 
 ### Create a New Role
+
 1. Navigate to Backend → Roles
 2. Enter role name and description
 3. Assign specific routes/permissions
 4. Save
 
 ### Add a New Module
+
 1. Create module directory in `application/module/YourModule/`
 2. Register module routes in `routes/module.php`
 3. Create module controllers, models, and views
@@ -348,6 +370,7 @@ Full dependencies available in `composer.json`
 ## 🚀 Deployment
 
 ### Production Checklist
+
 ```bash
 # Set environment to production
 APP_DEBUG=false
@@ -373,6 +396,7 @@ php artisan migrate --force
 ## 📚 Development Tips
 
 1. **Use Artisan Commands**
+
    ```bash
    php artisan make:model YourModel -m  # Create model with migration
    php artisan make:controller YourController
@@ -385,6 +409,7 @@ php artisan migrate --force
    - `MediaManager::media()` - Render media selection UI
 
 3. **Use Route Caching** - For better performance in production
+
    ```bash
    php artisan route:cache
    ```
@@ -442,6 +467,4 @@ For inquiries, support, or collaboration opportunities, please reach out to:
 
 ---
 
-**Last Updated**: January 2026
-
-*Laracms - Making content management flexible, powerful, and developer-friendly*
+_Laracms - Making content management flexible, powerful, and developer-friendly_
